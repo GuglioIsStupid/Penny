@@ -123,6 +123,8 @@ client.on(Events.MessageCreate, async (message) => {
 // on ready
 client.once(Events.ClientReady, c => {
     console.log(`Logged in as ${c.user.tag}!`);
+    // Set status to "Recreating a Discord Bot!"
+    client.user.setActivity('Recreating a Discord Bot!', { type: 'PLAYING' });
 });
 
 // on server join
