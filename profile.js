@@ -13,25 +13,8 @@ if (!fs.existsSync('./profile.json')) {
 {
     "users": {}
 }
-    `);
+`);
 } 
-
-/* 
-Layout for profile.json:
-
-{
-    "users": {
-        "userId": {
-            "Cookies": 0,
-            "Credits": 0,
-            "Level": 0,
-            "XP": 0,
-            "nextLevelXP": 100,
-            "commandsUsed": 0,
-        }
-    }
-}
-*/
 
 // get profile.json
 profile = require('./profile.json');
@@ -141,8 +124,6 @@ async function createProfileImage(message) {
                 // STOP THE FUNCTION FROM RUNNING
                 return;
             }, 1000);
-
-            
         }, 1000);
     }, 1000);
 }
