@@ -84,10 +84,8 @@ async function createProfileImage(message) {
             // draw pfp 10 px from top and 10 px from left with a gray border under it (30px wide)
             ctx.fillStyle = '#808080';
             ctx.fillRect(10, 10, 490, 490);
-            console.log(`./convertedPfps/${user.id}.png`);
             loadImage(`./convertedPfps/${user.id}.png`).then((image) => {
                 ctx.drawImage(image, 30, 30, 450, 450);
-                console.log('drew pfp');
             });
 
             // draw a light gray rectangle under the pfp with a 30px gap from the pfp and bottom

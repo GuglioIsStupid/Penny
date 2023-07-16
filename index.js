@@ -98,6 +98,8 @@ client.on(Events.MessageCreate, async (message) => {
 
             profile.commandsUsed += 1;
             profile.XP += Math.floor(Math.random() * 10) + 1;
+            // give a very small amount of credits
+            profile.Credits += Math.floor(Math.random() * 10) + 1;
             if (profile.XP >= profile.nextLevelXP) {
                 profile.Level += 1;
                 profile.nextLevelXP += Math.floor(Math.random() * 100) + 1;

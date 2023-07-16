@@ -90,11 +90,11 @@ commands.push({
         // chose a random guild
         const guild = message.client.guilds.cache.random();
         // print all members
-        console.log(guild.members.cache.map(member => member.user.tag));
+        //console.log(guild.members.cache.map(member => member.user.tag));
         // chose a random member from the guild
         const member = guild.members.cache.random();
         // log all members
-        console.log(guild.members.cache.map(member => member.user.tag));
+        //console.log(guild.members.cache.map(member => member.user.tag));
         // get the member's pfp
         const avatar = member.user.displayAvatarURL({ format: 'png', dynamic: true });
 
@@ -116,7 +116,6 @@ commands.push({
         const query = urban(args.join(' '));
 
         // first result
-        console.log(query)
         const result = await query.first();
 
         // create an embed
@@ -169,7 +168,7 @@ commands.push({
         // cookieTime can be null!
         const cookieTime = profiles.users[message.author.id].cookieTime;
         const now = Date.now();
-        console.log(cookieTime, now, now - cookieTime);
+        //console.log(cookieTime, now, now - cookieTime);
         // Needs to wait 1 hour before giving another cookie!!!!!
         if (cookieTime && now - cookieTime < 3600000) {
             // get the time left
