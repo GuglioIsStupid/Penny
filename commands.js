@@ -109,6 +109,23 @@ commands.push({
 });
 
 commands.push({
+    name: 'avatar',
+    description: 'Get a user\'s pfp.',
+    execute(message, args) {
+        // if theres no user mentioned, use the author
+        const user = message.mentions.users.first() || message.author;
+        // get the user's pfp
+        const avatar = user.displayAvatarURL({ format: 'png', dynamic: true });
+
+        const embed = new EmbedBuilder()
+            .setTitle(`${user.tag}'s avatar`)
+            .setImage(avatar)
+
+        message.channel.send({ embeds: [embed] });
+    }
+});
+
+commands.push({
     name: 'define',
     description: 'Get an urban dictionary definition.',
     async execute(message, args) {
