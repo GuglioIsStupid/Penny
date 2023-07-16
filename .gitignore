@@ -1,0 +1,13 @@
+node_modules/
+profile.json
+tags.json
+
+*.gif
+pfps/*
+!pfps/.gitkeep
+profileImages/*
+!profileImages/.gitkeep
+convertedPfps/*
+!convertedPfps/.gitkeep
+
+.env

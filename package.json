@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "sharp": "^0.32.3",
+    "tenorjs": "^1.0.10",
+    "urban": "^0.3.4"
+  }
+}
