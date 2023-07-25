@@ -14,6 +14,8 @@ const Tenor = require('tenorjs').client({
     "DateFormat": "D/MM/YYYY - H:mm:ss A"
 });
 
+const request = require("request");
+
 // load profile and createProfileImage from profile.js
 const { profiles, createProfileImage } = require('./profile');
 /*
@@ -506,6 +508,20 @@ commands.push({
         }
     }
 })
+
+commands.push({
+    name: "motivate",
+    description: "Generate a random motivational quote.",
+    execute(message) {
+        request("http://inspirobot.me/api?generate=true", function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                message.channel.send(body);
+            } else {
+                message.channel.send("Error getting quote.");
+            }
+        });
+    }
+});
 
 commands.push({
     name: "help",
