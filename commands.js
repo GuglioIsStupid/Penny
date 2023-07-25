@@ -510,7 +510,7 @@ commands.push({
 })
 
 commands.push({
-    name: "motivate",
+    name: "inspire",
     description: "Generate a random motivational quote.",
     execute(message) {
         request("http://inspirobot.me/api?generate=true", function (error, response, body) {
